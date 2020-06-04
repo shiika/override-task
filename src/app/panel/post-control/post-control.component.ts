@@ -38,6 +38,8 @@ export class PostControlComponent implements OnInit {
         postTitle: new FormControl(updatingPost.title, Validators.required),
         postBody: new FormControl(updatingPost.body, Validators.required)
       });
+
+      document.body.scrollTop = 10;
     }
   }
 
