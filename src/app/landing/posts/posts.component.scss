@@ -1,0 +1,50 @@
+@import "../../../assets/Scss/mixins";
+@import "../../../assets//Scss/variables";
+
+.posts {
+    padding: 4rem 0;
+
+    &__header {
+
+        h1 {
+            @include primary-heading;
+        }
+    }
+
+    &__post {
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+
+        &__user {
+
+            &__img {
+                border-radius: 50%;
+                max-width: 2rem;
+                height: 2rem;
+            }
+
+            &__name {
+                font-size: 1rem;
+                color: $heading-color;
+            }
+
+            &__date {
+                font-size: 0.7rem;
+                color: $paragraph-color;
+            }
+        }
+
+        &__body {
+
+            &__title {
+                font-size: 1.5rem;
+                color: $heading-color;
+            }
+
+            &__text {
+                font-size: 1rem;
+                color: $paragraph-color;
+            }
+        }
+    }
+}

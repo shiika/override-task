@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "override-task"
+    }
+  },
+  "defaultProject": "override-task",
+  "cli": {
+    "analytics": "cfc5e286-d6d0-4029-8f99-0cb8dbeb983e"
+  }
 }

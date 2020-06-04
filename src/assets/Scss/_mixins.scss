@@ -1,0 +1,24 @@
+@mixin primary-button {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  font-size: 1.25rem;
+  padding: 1rem 5rem;
+}
+
+@mixin primary-heading {
+  font-size: 2.6rem;
+  color: $heading-color;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: $color-primary;
+    width: 70%;
+    height: 4px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}

@@ -1,0 +1,28 @@
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 posts__header d-flex justify-content-center my-5">
+        <h1 class="font-weight-bold">Timeline Posts</h1>
+      </div>
+
+      <div class="col-12 posts__post" *ngFor="let post of posts">
+        <div class="posts__post__user d-flex">
+          <img
+            src="../../../assets/img/user-icon.jpg"
+            alt="user-img"
+            class="posts__post__user__img"
+          />
+          <div class="posts__post__data ml-1">
+            <h3 class="posts__post__user__name mb-0">User Name</h3>
+            <p class="posts__post__user__date">June 30, 2020</p>
+          </div>
+        </div>
+
+        <div class="posts__post__body pl-3">
+          <h1 class="posts__post__body__title">{{ post.title }}</h1>
+          <h2 class="posts__post__body__text">{{ post.body }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

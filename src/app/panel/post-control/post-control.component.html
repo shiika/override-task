@@ -1,0 +1,34 @@
+
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="col-12">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="title">Post Title</label>
+        <input
+          type="text"
+          name="title"
+          class="form-control"
+          id="title"
+          formControlName="postTitle"
+        />
+      </div>
+      <div class="form-group">
+        <label for="body">Description</label>
+        <textarea
+          name="body"
+          class="form-control"
+          id="body"
+          rows="6"
+          formControlName="postBody"
+        ></textarea>
+      </div>
+      <div class="post-control__buttons d-flex justify-content-end">
+        <button
+          type="submit"
+          class="btn btn-outline-secondary mr-3"
+          [disabled]="postForm.invalid"
+        >
+          Save Post
+        </button>
+      </div>
+    </div>
+  </form>

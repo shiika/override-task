@@ -1,0 +1,47 @@
+<section class="auth">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-md-6 mt-5">
+        <form (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Email address..."
+              required
+              email
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Password..."
+              ngModel
+              required
+              minlength="6"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="authForm.invalid"
+          >
+            {{ isLogin ? "Login" : "Sign Up" }}
+          </button>
+          <button class="btn btn-primary ml-3" type="button" (click)="switchLogin()">
+            {{ isLogin ? "Switch to Sign Up" : "Switch to Login" }}
+          </button>
+        </form>
+        <div class="lds-hourglass" *ngIf="isLoading"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+@import "../../assets/Scss/variables";
+@import "../../assets/Scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.header {
+    padding: 5rem 0;
+    background-color: $light-background;
+  
+    &__intro {
+  
+      &__name {
+        font-size: 3rem;
+        color: $heading-color;
+      }
+  
+      &__button {
+        @include primary-button;
+      }
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    .navbar {
+  
+      &-brand {
+        font-size: 1.7rem;
+      }
+    }
+  
+    .header {
+  
+      &__intro {
+        position: relative;
+  
+        &__name {
+          font-size: 4.2rem;
+        }
+      }
+  
+      &__img {
+  
+        img {
+          max-width: 94%;
+          transform: translate(14px, 14px);
+        }
+      }
+    }
+  }

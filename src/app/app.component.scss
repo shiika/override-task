@@ -1,0 +1,49 @@
+@import "../assets/Scss/variables";
+@import "../assets/Scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.navbar {
+  background-color: white;
+
+
+  &-brand {
+    font-size: 1.5rem;
+  }
+
+  &-nav {
+    flex-direction: row;
+
+    .nav-link {
+      margin: 0 0.6rem;
+    }
+  }
+
+  .collapsed {
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  &-collapse {
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(md) {
+      transform: translateY(20px);
+      transition: opacity .4s, transform .4s;
+      opacity: 0;
+      width: 100%;
+      background-color: white;
+
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-toggler {
+    border-color: transparent;
+    border-radius: none;
+  }
+}

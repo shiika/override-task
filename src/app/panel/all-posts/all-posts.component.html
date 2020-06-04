@@ -1,0 +1,37 @@
+<section class="myPosts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 myPosts__header d-flex justify-content-center my-5">
+        <h1 class="font-weight-bold">My Posts</h1>
+      </div>
+
+      <div class="col-12">
+        <app-post-control (postUpdated)="updatePosts($event)"></app-post-control>
+      </div>
+
+      <div class="col-12 myPosts__post" *ngFor="let post of posts">
+        <div class="myPosts__post__user d-flex">
+          <img
+            src="../../../assets/img/user-icon.jpg"
+            alt="user-img"
+            class="myPosts__post__user__img"
+          />
+          <div class="myPosts__post__data ml-1">
+            <h3 class="myPosts__post__user__name mb-0">User Name</h3>
+            <p class="myPosts__post__user__date">June 30, 2020</p>
+          </div>
+        </div>
+
+        <div class="myPosts__post__body pl-3">
+          <h1 class="myPosts__post__body__title">{{ post.title }}</h1>
+          <h2 class="myPosts__post__body__text">{{ post.body }}</h2>
+        </div>
+
+        <div class="myPosts__post__buttons d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-secondary mr-3" [routerLink]="['/panel/posts/all', post.id]">Edit Post</button>
+          <button type="button" class="btn btn-outline-danger" (click)="onDeletePost(post.id)">Delete Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
